@@ -1,0 +1,10 @@
+Threading issue discussed on SO:
+	https://stackoverflow.com/questions/17053671/python-how-do-you-stop-numpy-from-multithreading
+In particular, this answer:
+	https://stackoverflow.com/a/48665619/2074002
+
+In short, add the following environment variables:
+	export OPENBLAS_NUM_THREADS=1
+	export MKL_NUM_THREADS=1
+
+The reason that it crashed was that the server doesn't allow for multithreaded python, and by default numpy (and/or something else) is multithreaded.

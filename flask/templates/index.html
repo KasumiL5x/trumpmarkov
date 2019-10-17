@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>Trump Twitter Markovify</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+	<style type="text/css">
+		@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+		* {
+		  margin: 0;
+		  padding: 0;
+		  list-style: none;
+		  vertical-align: baseline;
+		}
+
+		div {
+		  position: relative;
+		  z-index: 2;
+		}
+
+		body {
+		  background-color: #333;
+		  color: #333;
+		  font-family: 'Raleway', sans-serif;
+		  font-weight: 400;
+		}
+
+		.quote-box {
+		  border-radius: 10px;
+		  position: relative;
+		  margin: 8% auto auto auto;
+		  width: 450px;
+		  max-width: 70vw;
+		  padding: 40px 50px;
+		  display: table;
+		  background-color: #fff;
+		}
+		.quote-box .quote-text {
+		  text-align: center;
+		  width: 100%;
+		  height: auto;
+		  clear: both;
+		  font-weight: 500;
+		  font-size: 1.75em;
+		}
+		.quote-box .quote-text i {
+		  font-size: 1.0em;
+		  margin-right: 0.4em;
+		}
+		.quote-box .quote-author {
+		  width: 100%;
+		  height: auto;
+		  clear: both;
+		  padding-top: 20px;
+		  font-size: 1em;
+		  text-align: right;
+		}
+		.quote-box .buttons {
+		  width: 100%;
+		  margin: auto;
+		  display: block;
+		}
+		.quote-box .buttons .button {
+		  height: 38px;
+		  border: none;
+		  border-radius: 5px;
+		  color: #fff;
+		  background-color: #333;
+		  outline: none;
+		  font-size: 0.85em;
+		  padding: 8px 18px 6px 18px;
+		  margin-top: 30px;
+		  opacity: 1;
+		  cursor: pointer;
+		}
+		.quote-box .buttons .button:hover {
+		  opacity: 0.9;
+		}
+		.quote-box .buttons .button#tweet-quote, .quote-box .buttons .button#tumblr-quote {
+		  float: left;
+		  padding: 0px;
+		  padding-top: 8px;
+		  text-align: center;
+		  font-size: 1.2em;
+		  margin-right: 5px;
+		  height: 30px;
+		  width: 40px;
+		}
+		.quote-box .buttons .button#new-quote {
+		  float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="quote-box">
+	  <div class="quote-text">
+	    <i class="fa fa-quote-left"> </i><span id="text">{{prediction_out}}</span>
+	  </div>
+	  <div class="quote-author">
+	    - <span id="author">Tonald Drump</span>
+	  </div>
+	  <div class="buttons">
+	  	<form action="/py/trumpmarkov/gen" method="post">
+	    	<button class="button" id="new-quote">New Quote</button>
+	  	</form>
+	  </div>
+	</div>
+
+	<!-- <p>{{prediction_out}}</p> -->
+</body>
+</html>
+
+<!-- Integer ac fermentum velit. Mauris eu est eget ipsum commodo elementum. Aenean blandit risus id ullamcorper egestas. Donec at dictum diam. Vivamus fringilla, lorem eu congue scelerisque, urna nunc tempor enim, sed elementum ante turpis eu mi. Vivamus quis dapibus ipsum. Sed amet. -->
